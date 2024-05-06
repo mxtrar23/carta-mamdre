@@ -13,11 +13,13 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
+		<p class="footer">KTH ☺︎</p>
 	</body>
 </html>
 <style is:global>
@@ -37,7 +39,28 @@ const { title } = Astro.props;
 		background: #13151a;
 		background-size: 224px;
 	}
+	body{
+		height: 100vh;
+		display: flex;
+		background: rgb(238,174,202);
+		background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	}
 	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	.footer {
+		position: fixed;
+    bottom: 0;
+		width: 100%;
+		text-align: center;
 		font-family:
 			Menlo,
 			Monaco,
